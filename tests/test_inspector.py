@@ -39,7 +39,7 @@ def test_class_level_imports():
         """
     ) as module:
         method = module["A.method"]
-        assert method.parameters["p"].annotation == Name("StringIO", full="io.StringIO")
+        assert method.parameters["p"].annotation == Name("StringIO", full="_io.StringIO")
 
 
 def test_missing_dependency():
